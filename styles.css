@@ -103,6 +103,7 @@ img { max-width: 100%; display: block; }
 .home-affiliation { margin-bottom: 0; color: var(--navy); }
 .home-about-copy { margin: 0 0 14px; }
 .home-about .profile-row { margin: 0; }
+.home-email { margin: 4px 0 0; }
 .portrait-wrap {
   justify-self: end;
   width: min(100%, 390px);
