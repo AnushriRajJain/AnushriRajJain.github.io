@@ -3,24 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Anushri Jain is a Finance Ph.D. candidate at Washington University in St. Louis.">
+
+  <meta
+    name="description"
+    content="Anushri Jain is a Finance Ph.D. candidate at Washington University in St. Louis."
+  >
+
   <title>Anushri Jain</title>
+
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css?v=20260819-3">
 
   <style>
-    .top-header{width:100%;background:#003049;color:#FFFCF7;border-bottom:4px solid #669BBC;}
-    .top-header-inner{width:min(1040px,calc(100% - 44px));margin:0 auto;min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:36px;}
-    .header-name{color:#FFFCF7!important;text-decoration:none!important;font-family:Georgia,"Times New Roman",serif;font-size:30px;font-weight:400;line-height:1.2;white-space:nowrap;}
-    .header-nav{display:flex;align-items:center;justify-content:flex-end;gap:32px;margin-left:auto;}
-    .header-nav a{color:#FFFCF7!important;text-decoration:none!important;font:600 15px Arial,Helvetica,sans-serif;padding:31px 0 24px;border-bottom:3px solid transparent;white-space:nowrap;}
-    .header-nav a:hover{color:#fff!important;border-bottom-color:#669BBC;}
-    .header-nav a[aria-current="page"]{color:#fff!important;border-bottom-color:#C1121F;}
 
-    .activity-section{margin-top:42px;}
-    .activity-section h2{margin-bottom:10px;}
+    .top-header{
+      width:100%;
+      background:#003049;
+      color:#FFFCF7;
+      border-bottom:4px solid #669BBC;
+    }
 
-    .activity-list{border-top:1px solid rgba(0,48,73,.16);}
+    .top-header-inner{
+      width:min(1040px,calc(100% - 44px));
+      margin:0 auto;
+      min-height:86px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:36px;
+    }
+
+    .header-name{
+      color:#FFFCF7!important;
+      text-decoration:none!important;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:30px;
+      font-weight:400;
+      line-height:1.2;
+      white-space:nowrap;
+    }
+
+    .header-nav{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:32px;
+      margin-left:auto;
+    }
+
+    .header-nav a{
+      color:#FFFCF7!important;
+      text-decoration:none!important;
+      font:600 15px Arial,Helvetica,sans-serif;
+      padding:31px 0 24px;
+      border-bottom:3px solid transparent;
+      white-space:nowrap;
+    }
+
+    .header-nav a:hover{
+      color:#fff!important;
+      border-bottom-color:#669BBC;
+    }
+
+    .header-nav a[aria-current="page"]{
+      color:#fff!important;
+      border-bottom-color:#C1121F;
+    }
+
+
+    /* ---------- Activities ---------- */
+
+    .activity-section{
+      margin-top:42px;
+    }
+
+    .activity-section h2{
+      margin-bottom:10px;
+    }
+
+    .activity-list{
+      border-top:1px solid rgba(0,48,73,.16);
+    }
 
     .activity-item{
       display:grid;
@@ -54,6 +117,9 @@
       line-height:1.5;
     }
 
+
+    /* ---------- Upcoming ---------- */
+
     .upcoming-item{
       display:grid;
       grid-template-columns:150px 1fr auto;
@@ -84,13 +150,27 @@
       white-space:nowrap;
     }
 
-    /* Desktop alignment: section rules end at the same right edge as the portrait */
+
+    /* Desktop alignment:
+       divider lines end at same right edge as portrait */
+
     @media(min-width:761px){
-      .content-block{max-width:100%;}
-      .content-block > p{max-width:850px;}
+
+      .content-block{
+        max-width:100%;
+      }
+
+      .content-block > p{
+        max-width:850px;
+      }
+
     }
 
+
+    /* ---------- Mobile ---------- */
+
     @media(max-width:760px){
+
       .top-header-inner{
         width:min(100% - 28px,1040px);
         padding:17px 0 0;
@@ -125,104 +205,166 @@
       .upcoming-badge{
         justify-self:start;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- HEADER -->
+
   <header class="top-header">
+
     <div class="top-header-inner">
 
-      <a class="header-name" href="/">Anushri Jain</a>
+      <a class="header-name" href="/">
+        Anushri Jain
+      </a>
 
       <nav class="header-nav" aria-label="Main navigation">
-        <a href="/" aria-current="page">Home</a>
-        <a href="/research/">Research</a>
-        <a href="/discussions/">Discussions</a>
-        <a href="/cv/">CV</a>
+
+        <a href="/" aria-current="page">
+          Home
+        </a>
+
+        <a href="/research/">
+          Research
+        </a>
+
+        <a href="/discussions/">
+          Discussions
+        </a>
+
+        <a href="/cv/">
+          CV
+        </a>
+
       </nav>
 
     </div>
+
   </header>
 
 
+
   <main class="page">
+
+
+    <!-- ABOUT -->
 
     <section class="home-intro">
 
       <div class="home-about">
 
-        <h1 class="section-title">About Me</h1>
+        <h1 class="section-title">
+          About Me
+        </h1>
+
 
         <p class="home-about-copy">
+
           I am a Ph.D. candidate in Finance at Olin Business School,
           Washington University in St. Louis. I study how firms adjust
           their strategies in response to public policy and technological
           change. My research uses quasi-experimental variation to examine
           these corporate responses and their consequences for workers and
           local economies.
+
         </p>
 
+
         <p class="home-about-copy">
+
           Before coming to WashU, I studied applied mathematics and economics
           at UC San Diego and gained industry experience at Oracle and Microsoft.
           Outside of research, I enjoy playing tennis and practicing yoga,
           and I am also a certified yoga instructor.
+
         </p>
 
+
         <p class="profile-row">
+
           <strong>Profile Links:</strong>
 
           <span>
-            <a href="https://scholar.google.com/citations?hl=en&amp;user=pGhAbaEAAAAJ">
+            <a
+              href="https://scholar.google.com/citations?hl=en&amp;user=pGhAbaEAAAAJ"
+            >
               Google Scholar
             </a>
           </span>
 
           <span>
-            <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6646426">
+            <a
+              href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6646426"
+            >
               SSRN
             </a>
           </span>
 
           <span>
-            <a href="https://www.linkedin.com/in/anushri-jain-827964139/">
+            <a
+              href="https://www.linkedin.com/in/anushri-jain-827964139/"
+            >
               LinkedIn
             </a>
           </span>
+
         </p>
 
+
         <p class="home-email">
+
           <strong>Email:</strong>
-          <a href="mailto:arjain@wustl.edu">arjain@wustl.edu</a>
+
+          <a href="mailto:arjain@wustl.edu">
+            arjain@wustl.edu
+          </a>
+
         </p>
 
       </div>
 
 
       <div class="portrait-wrap">
-        <img src="/assets/anushri-jain.jpg" alt="Portrait of Anushri Jain">
+
+        <img
+          src="/assets/anushri-jain.jpg"
+          alt="Portrait of Anushri Jain"
+        >
+
       </div>
 
     </section>
+
 
 
     <!-- UPCOMING -->
 
     <section class="content-block activity-section">
 
-      <h2>Upcoming</h2>
+      <h2>
+        Upcoming
+      </h2>
 
 
-      <!-- FMA -->
+
+      <!-- FMA ANNUAL MEETING -->
 
       <div class="upcoming-item">
 
         <div class="activity-date">
+
           Oct 14–17<br>
           2026
+
         </div>
+
 
         <div>
 
@@ -235,13 +377,22 @@
           </p>
 
           <p class="activity-meta">
+
+            <strong>
+              Research Presentation
+            </strong>
+
+            ·
+
             <em>
               Board Diversity and the Career Progression of Women:
               Evidence from SB 826
             </em>
+
           </p>
 
         </div>
+
 
         <span class="upcoming-badge">
           Upcoming
@@ -250,14 +401,18 @@
       </div>
 
 
+
       <!-- OLIN FINANCE CONFERENCE -->
 
       <div class="upcoming-item">
 
         <div class="activity-date">
+
           Nov 12<br>
           2026
+
         </div>
+
 
         <div>
 
@@ -270,30 +425,42 @@
           </p>
 
           <p class="activity-meta">
-            <strong>Poster</strong> ·
+
+            <strong>
+              Poster
+            </strong>
+
+            ·
+
             <em>
               When Innovation Outpaces Policy:
               Hyperscale Data Centers and the Fiscal Costs of Investment Incentives
             </em>
+
           </p>
 
         </div>
 
+
         <span class="upcoming-badge">
-          Poster
+          Upcoming
         </span>
 
       </div>
 
 
-      <!-- AFA BOARD DIVERSITY -->
+
+      <!-- AFA ANNUAL MEETING -->
 
       <div class="upcoming-item">
 
         <div class="activity-date">
+
           Jan 3–5<br>
           2027
+
         </div>
+
 
         <div>
 
@@ -306,13 +473,22 @@
           </p>
 
           <p class="activity-meta">
+
+            <strong>
+              Research Presentation
+            </strong>
+
+            ·
+
             <em>
               Board Diversity and the Career Progression of Women:
               Evidence from SB 826
             </em>
+
           </p>
 
         </div>
+
 
         <span class="upcoming-badge">
           Upcoming
@@ -321,14 +497,18 @@
       </div>
 
 
-      <!-- AFA DATA CENTER POSTER -->
+
+      <!-- AFA PHD STUDENT POSTER SESSION -->
 
       <div class="upcoming-item">
 
         <div class="activity-date">
+
           Jan 3–5<br>
           2027
+
         </div>
+
 
         <div>
 
@@ -341,38 +521,54 @@
           </p>
 
           <p class="activity-meta">
-            <strong>Poster</strong> ·
+
+            <strong>
+              Poster
+            </strong>
+
+            ·
+
             <em>
               When Innovation Outpaces Policy:
               Hyperscale Data Centers and the Fiscal Costs of Investment Incentives
             </em>
+
           </p>
 
         </div>
 
+
         <span class="upcoming-badge">
-          Poster
+          Upcoming
         </span>
 
       </div>
 
+
     </section>
+
 
 
     <!-- RECENT ACTIVITIES -->
 
     <section class="content-block activity-section">
 
-      <h2>Recent Activities</h2>
+      <h2>
+        Recent Activities
+      </h2>
+
 
       <div class="activity-list">
 
+
+        <!-- FMA EUROPE -->
 
         <div class="activity-item">
 
           <div class="activity-date">
             2026
           </div>
+
 
           <div>
 
@@ -389,11 +585,15 @@
         </div>
 
 
+
+        <!-- SWFA -->
+
         <div class="activity-item">
 
           <div class="activity-date">
             2026
           </div>
+
 
           <div>
 
@@ -410,11 +610,15 @@
         </div>
 
 
+
+        <!-- AFA POSTER -->
+
         <div class="activity-item">
 
           <div class="activity-date">
             2026
           </div>
+
 
           <div>
 
@@ -431,11 +635,15 @@
         </div>
 
 
+
+        <!-- AUSTRALASIAN -->
+
         <div class="activity-item">
 
           <div class="activity-date">
             2025
           </div>
+
 
           <div>
 
@@ -451,16 +659,22 @@
 
         </div>
 
+
       </div>
 
     </section>
 
+
   </main>
 
 
+
   <footer class="footer">
+
     © 2026 Anushri Jain
+
   </footer>
+
 
 </body>
 </html>
