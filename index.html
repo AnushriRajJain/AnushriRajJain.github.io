@@ -21,6 +21,7 @@
     .activity-section h2{margin-bottom:10px;}
 
     .activity-list{border-top:1px solid rgba(0,48,73,.16);}
+
     .activity-item{
       display:grid;
       grid-template-columns:150px 1fr;
@@ -61,7 +62,10 @@
       border-bottom:1px solid rgba(0,48,73,.13);
       align-items:center;
     }
-    .upcoming-item:first-child{border-top:1px solid rgba(0,48,73,.16);}
+
+    .upcoming-item:first-child{
+      border-top:1px solid rgba(0,48,73,.16);
+    }
 
     .upcoming-place{
       margin:4px 0 0;
@@ -80,114 +84,383 @@
       white-space:nowrap;
     }
 
-
-    /* Desktop alignment: section rules now end at the same right edge as the portrait */
+    /* Desktop alignment: section rules end at the same right edge as the portrait */
     @media(min-width:761px){
       .content-block{max-width:100%;}
       .content-block > p{max-width:850px;}
     }
 
     @media(max-width:760px){
-      .top-header-inner{width:min(100% - 28px,1040px);padding:17px 0 0;min-height:auto;flex-direction:column;align-items:flex-start;gap:6px}
-      .header-nav{width:100%;margin-left:0;justify-content:flex-start;gap:20px;overflow-x:auto}
-      .header-nav a{padding:12px 0 11px}
-      .header-name{font-size:27px}
-      .activity-item,.upcoming-item{grid-template-columns:1fr;gap:7px}
-      .upcoming-badge{justify-self:start}
+      .top-header-inner{
+        width:min(100% - 28px,1040px);
+        padding:17px 0 0;
+        min-height:auto;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:6px;
+      }
+
+      .header-nav{
+        width:100%;
+        margin-left:0;
+        justify-content:flex-start;
+        gap:20px;
+        overflow-x:auto;
+      }
+
+      .header-nav a{
+        padding:12px 0 11px;
+      }
+
+      .header-name{
+        font-size:27px;
+      }
+
+      .activity-item,
+      .upcoming-item{
+        grid-template-columns:1fr;
+        gap:7px;
+      }
+
+      .upcoming-badge{
+        justify-self:start;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header class="top-header">
     <div class="top-header-inner">
+
       <a class="header-name" href="/">Anushri Jain</a>
+
       <nav class="header-nav" aria-label="Main navigation">
         <a href="/" aria-current="page">Home</a>
         <a href="/research/">Research</a>
         <a href="/discussions/">Discussions</a>
         <a href="/cv/">CV</a>
       </nav>
+
     </div>
   </header>
 
+
   <main class="page">
+
     <section class="home-intro">
+
       <div class="home-about">
+
         <h1 class="section-title">About Me</h1>
-        <p class="home-about-copy">I am a Ph.D. candidate in Finance at Olin Business School, Washington University in St. Louis. I study how firms adjust their strategies in response to public policy and technological change. My research uses quasi-experimental variation to examine these corporate responses and their consequences for workers and local economies.</p>
-        <p class="home-about-copy">Before coming to WashU, I studied applied mathematics and economics at UC San Diego and gained industry experience at Oracle and Microsoft. Outside of research, I enjoy playing tennis and practicing yoga, and I am also a certified yoga instructor.</p>
-        <p class="profile-row"><strong>Profile Links:</strong> <span><a href="https://scholar.google.com/citations?hl=en&amp;user=pGhAbaEAAAAJ">Google Scholar</a></span> <span><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6646426">SSRN</a></span> <span><a href="https://www.linkedin.com/in/anushri-jain-827964139/">LinkedIn</a></span></p>
-        <p class="home-email"><strong>Email:</strong> <a href="mailto:arjain@wustl.edu">arjain@wustl.edu</a></p>
+
+        <p class="home-about-copy">
+          I am a Ph.D. candidate in Finance at Olin Business School,
+          Washington University in St. Louis. I study how firms adjust
+          their strategies in response to public policy and technological
+          change. My research uses quasi-experimental variation to examine
+          these corporate responses and their consequences for workers and
+          local economies.
+        </p>
+
+        <p class="home-about-copy">
+          Before coming to WashU, I studied applied mathematics and economics
+          at UC San Diego and gained industry experience at Oracle and Microsoft.
+          Outside of research, I enjoy playing tennis and practicing yoga,
+          and I am also a certified yoga instructor.
+        </p>
+
+        <p class="profile-row">
+          <strong>Profile Links:</strong>
+
+          <span>
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=pGhAbaEAAAAJ">
+              Google Scholar
+            </a>
+          </span>
+
+          <span>
+            <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6646426">
+              SSRN
+            </a>
+          </span>
+
+          <span>
+            <a href="https://www.linkedin.com/in/anushri-jain-827964139/">
+              LinkedIn
+            </a>
+          </span>
+        </p>
+
+        <p class="home-email">
+          <strong>Email:</strong>
+          <a href="mailto:arjain@wustl.edu">arjain@wustl.edu</a>
+        </p>
+
       </div>
+
+
       <div class="portrait-wrap">
         <img src="/assets/anushri-jain.jpg" alt="Portrait of Anushri Jain">
       </div>
+
     </section>
 
+
+    <!-- UPCOMING -->
+
     <section class="content-block activity-section">
+
       <h2>Upcoming</h2>
 
-      <div class="upcoming-item">
-        <div class="activity-date">Oct 14–17<br>2026</div>
-        <div>
-          <p class="activity-title">FMA Annual Meeting</p>
-          <p class="upcoming-place">Tampa, Florida</p>
-          <p class="activity-meta"><em>Board Diversity and the Career Progression of Women: Evidence from SB 826</em></p>
-        </div>
-        <span class="upcoming-badge">Upcoming</span>
-      </div>
+
+      <!-- FMA -->
 
       <div class="upcoming-item">
-        <div class="activity-date">Jan 3–5<br>2027</div>
-        <div>
-          <p class="activity-title">American Finance Association Annual Meeting</p>
-          <p class="upcoming-place">Washington, D.C.</p>
-          <p class="activity-meta"><em>Board Diversity and the Career Progression of Women: Evidence from SB 826</em></p>
+
+        <div class="activity-date">
+          Oct 14–17<br>
+          2026
         </div>
-        <span class="upcoming-badge">Upcoming</span>
+
+        <div>
+
+          <p class="activity-title">
+            FMA Annual Meeting
+          </p>
+
+          <p class="upcoming-place">
+            Tampa, Florida
+          </p>
+
+          <p class="activity-meta">
+            <em>
+              Board Diversity and the Career Progression of Women:
+              Evidence from SB 826
+            </em>
+          </p>
+
+        </div>
+
+        <span class="upcoming-badge">
+          Upcoming
+        </span>
+
       </div>
+
+
+      <!-- OLIN FINANCE CONFERENCE -->
+
+      <div class="upcoming-item">
+
+        <div class="activity-date">
+          Nov 12<br>
+          2026
+        </div>
+
+        <div>
+
+          <p class="activity-title">
+            22nd Annual Olin Finance Conference
+          </p>
+
+          <p class="upcoming-place">
+            Washington University in St. Louis
+          </p>
+
+          <p class="activity-meta">
+            <strong>Poster</strong> ·
+            <em>
+              When Innovation Outpaces Policy:
+              Hyperscale Data Centers and the Fiscal Costs of Investment Incentives
+            </em>
+          </p>
+
+        </div>
+
+        <span class="upcoming-badge">
+          Poster
+        </span>
+
+      </div>
+
+
+      <!-- AFA BOARD DIVERSITY -->
+
+      <div class="upcoming-item">
+
+        <div class="activity-date">
+          Jan 3–5<br>
+          2027
+        </div>
+
+        <div>
+
+          <p class="activity-title">
+            American Finance Association Annual Meeting
+          </p>
+
+          <p class="upcoming-place">
+            Washington, D.C.
+          </p>
+
+          <p class="activity-meta">
+            <em>
+              Board Diversity and the Career Progression of Women:
+              Evidence from SB 826
+            </em>
+          </p>
+
+        </div>
+
+        <span class="upcoming-badge">
+          Upcoming
+        </span>
+
+      </div>
+
+
+      <!-- AFA DATA CENTER POSTER -->
+
+      <div class="upcoming-item">
+
+        <div class="activity-date">
+          Jan 3–5<br>
+          2027
+        </div>
+
+        <div>
+
+          <p class="activity-title">
+            AFA Ph.D. Student Poster Session
+          </p>
+
+          <p class="upcoming-place">
+            Washington, D.C.
+          </p>
+
+          <p class="activity-meta">
+            <strong>Poster</strong> ·
+            <em>
+              When Innovation Outpaces Policy:
+              Hyperscale Data Centers and the Fiscal Costs of Investment Incentives
+            </em>
+          </p>
+
+        </div>
+
+        <span class="upcoming-badge">
+          Poster
+        </span>
+
+      </div>
+
     </section>
 
+
+    <!-- RECENT ACTIVITIES -->
+
     <section class="content-block activity-section">
+
       <h2>Recent Activities</h2>
 
       <div class="activity-list">
-        <div class="activity-item">
-          <div class="activity-date">2026</div>
-          <div>
-            <p class="activity-title">FMA European Conference</p>
-            <p class="activity-meta">Research presentation · Conference discussion</p>
-          </div>
-        </div>
+
 
         <div class="activity-item">
-          <div class="activity-date">2026</div>
-          <div>
-            <p class="activity-title">Southwestern Finance Association Conference</p>
-            <p class="activity-meta">Research presentation · Conference discussion</p>
+
+          <div class="activity-date">
+            2026
           </div>
+
+          <div>
+
+            <p class="activity-title">
+              FMA European Conference
+            </p>
+
+            <p class="activity-meta">
+              Research presentation · Conference discussion
+            </p>
+
+          </div>
+
         </div>
 
-        <div class="activity-item">
-          <div class="activity-date">2026</div>
-          <div>
-            <p class="activity-title">AFA Ph.D. Student Poster Session</p>
-            <p class="activity-meta">Poster</p>
-          </div>
-        </div>
 
         <div class="activity-item">
-          <div class="activity-date">2025</div>
-          <div>
-            <p class="activity-title">Australasian Finance and Banking Conference</p>
-            <p class="activity-meta">Research presentation · Conference discussion</p>
+
+          <div class="activity-date">
+            2026
           </div>
+
+          <div>
+
+            <p class="activity-title">
+              Southwestern Finance Association Conference
+            </p>
+
+            <p class="activity-meta">
+              Research presentation · Conference discussion
+            </p>
+
+          </div>
+
         </div>
+
+
+        <div class="activity-item">
+
+          <div class="activity-date">
+            2026
+          </div>
+
+          <div>
+
+            <p class="activity-title">
+              AFA Ph.D. Student Poster Session
+            </p>
+
+            <p class="activity-meta">
+              Poster
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="activity-item">
+
+          <div class="activity-date">
+            2025
+          </div>
+
+          <div>
+
+            <p class="activity-title">
+              Australasian Finance and Banking Conference
+            </p>
+
+            <p class="activity-meta">
+              Research presentation · Conference discussion
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
   </main>
 
-  <footer class="footer">© 2026 Anushri Jain</footer>
+
+  <footer class="footer">
+    © 2026 Anushri Jain
+  </footer>
+
 </body>
 </html>
