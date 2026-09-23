@@ -1,76 +1,716 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Research by Anushri Jain.">
-  <title>Research | Anushri Jain</title>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css?v=20260819-3">
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Research by Anushri Jain."
+  >
+
+  <title>
+    Research | Anushri Jain
+  </title>
+
+  <link
+    rel="icon"
+    href="/favicon.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/styles.css?v=20260819-3"
+  >
+
+
   <style>
-    .top-header{width:100%;background:#003049;color:#FFFCF7;border-bottom:4px solid #669BBC;}
-    .top-header-inner{width:min(1040px,calc(100% - 44px));margin:0 auto;min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:36px;}
-    .header-name{color:#FFFCF7!important;text-decoration:none!important;font-family:Georgia,"Times New Roman",serif;font-size:30px;font-weight:400;line-height:1.2;white-space:nowrap;}
-    .header-nav{display:flex;align-items:center;justify-content:flex-end;gap:32px;margin-left:auto;}
-    .header-nav a{color:#FFFCF7!important;text-decoration:none!important;font:600 15px Arial,Helvetica,sans-serif;padding:31px 0 24px;border-bottom:3px solid transparent;white-space:nowrap;}
-    .header-nav a:hover{color:#fff!important;border-bottom-color:#669BBC;}
-    .header-nav a[aria-current="page"]{color:#fff!important;border-bottom-color:#C1121F;}
-    .research-grid{display:grid;grid-template-columns:420px minmax(420px,1fr);gap:34px;align-items:start;margin:14px 0 40px;}
-    .research-graphic img{width:100%;height:auto;display:block;border:1px solid #d3d8dc;}
-    .research-copy h2{margin:0 0 12px;font-family:Georgia,"Times New Roman",serif;font-size:29px;line-height:1.24;color:#003049;}
-    .research-copy p{margin:0 0 12px;}
-    .jmp-label{margin:0 0 12px;color:#780000;font:700 14px Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase;}
-    .coauthors{color:#5f666b;}.coauthors a{color:#5f666b;text-decoration:none;border-bottom:1px solid rgba(95,102,107,.35);}.coauthors a:hover{color:#003049;border-bottom-color:#003049;}
-    @media(max-width:980px){.research-grid{grid-template-columns:1fr;}.research-graphic{max-width:560px;}}
-    @media(max-width:760px){.top-header-inner{width:min(100% - 28px,1040px);padding:17px 0 0;min-height:auto;flex-direction:column;align-items:flex-start;gap:6px}.header-nav{width:100%;margin-left:0;justify-content:flex-start;gap:20px;overflow-x:auto}.header-nav a{padding:12px 0 11px}.header-name{font-size:27px}}
+
+    /* ------------------------------------------------
+       HEADER
+    ------------------------------------------------ */
+
+    .top-header{
+      width:100%;
+      background:#003049;
+      color:#FFFCF7;
+      border-bottom:4px solid #669BBC;
+    }
+
+    .top-header-inner{
+      width:min(1040px,calc(100% - 44px));
+      margin:0 auto;
+      min-height:86px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:36px;
+    }
+
+    .header-name{
+      color:#FFFCF7!important;
+      text-decoration:none!important;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:30px;
+      font-weight:400;
+      line-height:1.2;
+      white-space:nowrap;
+    }
+
+    .header-nav{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:32px;
+      margin-left:auto;
+    }
+
+    .header-nav a{
+      color:#FFFCF7!important;
+      text-decoration:none!important;
+      font:600 15px Arial,Helvetica,sans-serif;
+      padding:31px 0 24px;
+      border-bottom:3px solid transparent;
+      white-space:nowrap;
+    }
+
+    .header-nav a:hover{
+      color:#fff!important;
+      border-bottom-color:#669BBC;
+    }
+
+    .header-nav a[aria-current="page"]{
+      color:#fff!important;
+      border-bottom-color:#C1121F;
+    }
+
+
+    /* ------------------------------------------------
+       RESEARCH PAGE
+    ------------------------------------------------ */
+
+    .research-page{
+      max-width:900px;
+    }
+
+    .research-paper{
+      padding:30px 0 32px;
+      border-top:1px solid rgba(0,48,73,.22);
+    }
+
+    .research-paper:first-of-type{
+      border-top:none;
+      padding-top:10px;
+    }
+
+    .research-paper h2{
+      margin:0 0 8px;
+      color:#003049;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:26px;
+      font-weight:400;
+      line-height:1.3;
+    }
+
+    .jmp-label{
+      margin:0 0 8px;
+      color:#780000;
+      font:700 13px Arial,Helvetica,sans-serif;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .coauthors{
+      margin:0 0 12px;
+      color:#5f666b;
+      font-style:italic;
+      line-height:1.5;
+    }
+
+    .coauthors a{
+      color:#5f666b;
+      text-decoration:none;
+      border-bottom:1px solid rgba(95,102,107,.35);
+    }
+
+    .coauthors a:hover{
+      color:#003049;
+      border-bottom-color:#003049;
+    }
+
+    .paper-links{
+      margin:10px 0 0;
+      font-size:14px;
+    }
+
+    .paper-links a{
+      margin-right:16px;
+    }
+
+
+    /* ------------------------------------------------
+       EXPANDABLE ABSTRACT
+    ------------------------------------------------ */
+
+    details.abstract{
+      margin-top:14px;
+    }
+
+    details.abstract summary{
+      list-style:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+
+      color:#780000;
+
+      font-family:Arial,Helvetica,sans-serif;
+      font-size:14px;
+      font-weight:700;
+
+      user-select:none;
+    }
+
+    details.abstract summary::-webkit-details-marker{
+      display:none;
+    }
+
+    details.abstract summary::after{
+      content:"+";
+      display:inline-block;
+
+      color:#780000;
+
+      font-size:20px;
+      font-weight:400;
+      line-height:1;
+
+      transform:translateY(-1px);
+    }
+
+    details.abstract[open] summary::after{
+      content:"−";
+    }
+
+    .abstract-text{
+      margin-top:14px;
+      max-width:830px;
+
+      color:#1f2930;
+
+      font-size:15px;
+      line-height:1.65;
+    }
+
+    .abstract-text p{
+      margin:0;
+    }
+
+
+    /* ------------------------------------------------
+       WORK IN PROGRESS
+    ------------------------------------------------ */
+
+    .wip-header{
+      margin-top:42px;
+      padding-top:8px;
+    }
+
+    .wip-header h1{
+      margin-bottom:4px;
+    }
+
+
+    /* ------------------------------------------------
+       MOBILE
+    ------------------------------------------------ */
+
+    @media(max-width:760px){
+
+      .top-header-inner{
+        width:min(100% - 28px,1040px);
+        padding:17px 0 0;
+        min-height:auto;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:6px;
+      }
+
+      .header-nav{
+        width:100%;
+        margin-left:0;
+        justify-content:flex-start;
+        gap:20px;
+        overflow-x:auto;
+      }
+
+      .header-nav a{
+        padding:12px 0 11px;
+      }
+
+      .header-name{
+        font-size:27px;
+      }
+
+      .research-paper h2{
+        font-size:23px;
+      }
+
+    }
+
   </style>
+
 </head>
+
+
 <body>
-<header class="top-header">
-  <div class="top-header-inner">
-    <a class="header-name" href="/">Anushri Jain</a>
-    <nav class="header-nav" aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/research/" aria-current="page">Research</a>
-      <a href="/discussions/">Discussions</a>
-      <a href="/cv/">CV</a>
-    </nav>
-  </div>
-</header>
-<main class="page">
-  <header class="simple-page-header"><h1>Research</h1></header>
 
-  <article class="paper research-grid">
-    <div class="research-graphic"><img src="/assets/research-data-center.png" alt="Editorial illustration of a giant upgraded hyperscale data center being delivered to a neighborhood."></div>
-    <div class="research-copy">
-      <p class="jmp-label">Job Market Paper</p>
-      <h2>When Innovation Outpaces Policy: Hyperscale Data Centers and the Fiscal Costs of Investment Incentives</h2>
-      <p>Governments increasingly use tax incentives to attract capital-intensive projects, yet their local returns remain uncertain. Exploiting the staggered adoption of state data-center tax incentives and county-level variation in proximity to major water bodies, I study how subsidized data-center investment affects public finances, employment, resource markets, and political outcomes.</p>
-      <p>Draft available upon request.</p>
+
+  <!-- HEADER -->
+
+  <header class="top-header">
+
+    <div class="top-header-inner">
+
+      <a
+        class="header-name"
+        href="/"
+      >
+        Anushri Jain
+      </a>
+
+
+      <nav
+        class="header-nav"
+        aria-label="Main navigation"
+      >
+
+        <a href="/">
+          Home
+        </a>
+
+        <a
+          href="/research/"
+          aria-current="page"
+        >
+          Research
+        </a>
+
+        <a href="/discussions/">
+          Discussions
+        </a>
+
+        <a href="/cv/">
+          CV
+        </a>
+
+      </nav>
+
     </div>
-  </article>
 
-  <article class="paper research-grid">
-    <div class="research-graphic"><img src="/assets/research-broken-rung.png" alt="Editorial illustration of the broken rung in women's career progression."></div>
-    <div class="research-copy">
-      <h2>Board Diversity and the Career Progression of Women: Evidence from SB 826</h2>
-      <p class="coauthors">with <a href="https://www.ranamohie.com/" target="_blank" rel="noopener">Rana Mohie El Din</a></p>
-      <p>Using California’s 2018 board gender quota as a natural experiment, we study whether greater board diversity affects women’s careers throughout the firm.</p>
-      <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4787312">SSRN</a></p>
-    </div>
-  </article>
+  </header>
 
-  <article class="paper research-grid">
-    <div class="research-graphic"><img src="/assets/research-eps.png" alt="Editorial illustration of an acquisition discussion where a decision-maker focuses on EPS."></div>
-    <div class="research-copy">
-      <h2>EPS-Motivated Mergers</h2>
-      <p class="coauthors">with <a href="https://sites.google.com/asu.edu/twbates/home" target="_blank" rel="noopener">Thomas Bates</a>, <a href="https://www.blackrock.com/us/individual/biographies/gerald-garvey" target="_blank" rel="noopener">Gerald T. Garvey</a>, <a href="https://www.smu.edu/cox/academics/faculty/james-linck" target="_blank" rel="noopener">James Linck</a>, and <a href="https://www.smu.edu/cox/academics/faculty/todd-milbourn" target="_blank" rel="noopener">Todd T. Milbourn</a></p>
-      <p>We show that valuation differences between bidders and targets help predict merger activity. Firms are more likely to be acquired when more potential buyers could increase earnings per share through the transaction, even after accounting for other predictors of merger activity.</p>
-    </div>
-  </article>
 
-  <header class="simple-page-header"><h1>Work in Progress</h1></header>
-  <article class="paper"><h2>Acquisition Prospects and Startup Strategy</h2><p class="coauthors">with <a href="https://pnevmatikos.com/" target="_blank" rel="noopener">Lampros Pnevmatikos</a> and <a href="https://www.joaodimas.com/" target="_blank" rel="noopener">João Dimas</a></p><p>We examine how startups alter product-development and hiring strategies when acquisition becomes less likely.</p></article>
-  <article class="paper"><h2>Open Data Portals and Housing-Market Liquidity</h2><p class="coauthors">with <a href="https://www.danye-wang.net/" target="_blank" rel="noopener">Danye Wang</a> and <a href="https://olin.washu.edu/doctoral-student/yongzhao-vincent-lin" target="_blank" rel="noopener">Vincent Lin</a></p><p>We examine whether municipal open data portals reduce information asymmetries and improve housing-market liquidity.</p></article>
-</main>
-<footer class="footer">© 2026 Anushri Jain</footer>
+
+  <!-- PAGE -->
+
+  <main class="page research-page">
+
+
+    <header class="simple-page-header">
+
+      <h1>
+        Research
+      </h1>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         DATA CENTER PAPER
+    ====================================================== -->
+
+    <article class="research-paper">
+
+      <p class="jmp-label">
+        Job Market Paper
+      </p>
+
+      <h2>
+        When Innovation Outpaces Policy:
+        Hyperscale Data Centers and the Fiscal Costs of Investment Incentives
+      </h2>
+
+
+      <details class="abstract">
+
+        <summary>
+          Abstract
+        </summary>
+
+        <div class="abstract-text">
+
+          <p>
+            Governments increasingly use investment incentives to attract
+            large capital-intensive projects, but the local returns to these
+            policies remain uncertain. I study state tax incentives for data
+            centers, an industry that has expanded rapidly as advances in
+            cloud computing and artificial intelligence have increased the
+            scale and resource intensity of computing infrastructure.
+            Exploiting the staggered adoption of state data-center tax
+            incentives and within-state variation in counties' proximity to
+            large water bodies, I examine how subsidized data-center
+            investment affects local public finances, employment, and
+            resource markets. Following incentive adoption, exposed counties
+            experience increases in government revenues and expenditures,
+            alongside greater debt issuance. At the same time, the expansion
+            of data centers places pressure on local inputs, including land
+            and electricity. Employment effects are weaker and can become
+            negative in the most exposed areas, consistent with the
+            possibility that resource-intensive investment creates
+            displacement alongside direct economic activity. The results
+            highlight how technological change can alter the local costs and
+            benefits of place-based investment incentives after those
+            policies have already been designed.
+          </p>
+
+        </div>
+
+      </details>
+
+
+      <p class="paper-links">
+        Draft available upon request.
+      </p>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         BOARD DIVERSITY PAPER
+    ====================================================== -->
+
+    <article class="research-paper">
+
+      <h2>
+        Board Diversity and the Career Progression of Women:
+        Evidence from SB 826
+      </h2>
+
+
+      <p class="coauthors">
+
+        with
+
+        <a
+          href="https://www.ranamohie.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Rana Mohie El Din
+        </a>
+
+      </p>
+
+
+      <details class="abstract">
+
+        <summary>
+          Abstract
+        </summary>
+
+        <div class="abstract-text">
+
+          <p>
+            Women remain substantially underrepresented in senior corporate
+            positions, with prior evidence pointing to a “broken rung” early
+            in the promotion ladder. We study whether increasing female
+            representation at the very top of the firm affects women's career
+            progression throughout the organization. We exploit California's
+            2018 board gender diversity mandate, SB 826, which required
+            publicly traded firms headquartered in the state to add women to
+            their boards. Using the mandate as a natural experiment, we
+            examine changes in hiring, promotions, and employee exits across
+            organizational levels. Greater female board representation is
+            followed by increased hiring and promotion of women, with
+            particularly pronounced changes in middle-management positions.
+            At the same time, female employee exits also increase in parts of
+            the organizational hierarchy. The results suggest that changes in
+            representation at the board level can affect the internal labor
+            market well beyond the boardroom and provide evidence on how
+            leadership diversity shapes women's career progression within
+            firms.
+          </p>
+
+        </div>
+
+      </details>
+
+
+      <p class="paper-links">
+
+        <a
+          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4787312"
+          target="_blank"
+          rel="noopener"
+        >
+          SSRN
+        </a>
+
+      </p>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         EPS PAPER
+    ====================================================== -->
+
+    <article class="research-paper">
+
+      <h2>
+        EPS-Motivated Mergers
+      </h2>
+
+
+      <p class="coauthors">
+
+        with
+
+        <a
+          href="https://sites.google.com/asu.edu/twbates/home"
+          target="_blank"
+          rel="noopener"
+        >
+          Thomas Bates
+        </a>,
+
+        <a
+          href="https://www.blackrock.com/us/individual/biographies/gerald-garvey"
+          target="_blank"
+          rel="noopener"
+        >
+          Gerald T. Garvey
+        </a>,
+
+        <a
+          href="https://www.smu.edu/cox/academics/faculty/james-linck"
+          target="_blank"
+          rel="noopener"
+        >
+          James Linck
+        </a>,
+
+        and
+
+        <a
+          href="https://www.smu.edu/cox/academics/faculty/todd-milbourn"
+          target="_blank"
+          rel="noopener"
+        >
+          Todd T. Milbourn
+        </a>
+
+      </p>
+
+
+      <details class="abstract">
+
+        <summary>
+          Abstract
+        </summary>
+
+        <div class="abstract-text">
+
+          <p>
+            We examine whether the mechanical effect of mergers on earnings
+            per share influences acquisition activity. Differences in
+            valuation between potential bidders and targets can allow an
+            acquirer to increase reported earnings per share through a
+            transaction even when that increase does not necessarily imply a
+            corresponding improvement in underlying economic value. We show
+            that firms are more likely to be acquired when a larger set of
+            potential buyers could increase earnings per share by purchasing
+            them. This relation remains after accounting for other established
+            predictors of merger activity. From the bidder side, firms with
+            access to a larger set of EPS-accretive targets are also more
+            likely to undertake acquisitions, although much of this relation
+            is associated with firm size and relative valuation. The evidence
+            indicates that earnings-per-share considerations influence the
+            matching of bidders and targets and can help explain which firms
+            participate in mergers.
+          </p>
+
+        </div>
+
+      </details>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         WORK IN PROGRESS
+    ====================================================== -->
+
+    <header class="simple-page-header wip-header">
+
+      <h1>
+        Work in Progress
+      </h1>
+
+    </header>
+
+
+
+    <!-- STARTUP PAPER -->
+
+    <article class="research-paper">
+
+      <h2>
+        Acquisition Prospects and Startup Strategy
+      </h2>
+
+
+      <p class="coauthors">
+
+        with
+
+        <a
+          href="https://pnevmatikos.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Lampros Pnevmatikos
+        </a>
+
+        and
+
+        <a
+          href="https://www.joaodimas.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          João Dimas
+        </a>
+
+      </p>
+
+
+      <details class="abstract">
+
+        <summary>
+          Abstract
+        </summary>
+
+        <div class="abstract-text">
+
+          <p>
+            We study how acquisition prospects shape startup strategy.
+            Acquisitions provide an important exit channel for entrepreneurial
+            firms and can therefore affect decisions made well before an exit
+            occurs. We examine how startups adjust product-development and
+            hiring strategies when the likelihood of acquisition declines.
+            Our analysis asks whether reduced acquisition prospects cause
+            startups to invest more heavily in building durable standalone
+            businesses and how these changes affect the composition of their
+            workforce and product-development choices. The project provides
+            evidence on how expected exit opportunities influence real
+            decisions inside young firms.
+          </p>
+
+        </div>
+
+      </details>
+
+    </article>
+
+
+
+    <!-- OPEN DATA PAPER -->
+
+    <article class="research-paper">
+
+      <h2>
+        Open Data Portals and Housing-Market Liquidity
+      </h2>
+
+
+      <p class="coauthors">
+
+        with
+
+        <a
+          href="https://www.danye-wang.net/"
+          target="_blank"
+          rel="noopener"
+        >
+          Danye Wang
+        </a>
+
+        and
+
+        <a
+          href="https://olin.washu.edu/doctoral-student/yongzhao-vincent-lin"
+          target="_blank"
+          rel="noopener"
+        >
+          Vincent Lin
+        </a>
+
+      </p>
+
+
+      <details class="abstract">
+
+        <summary>
+          Abstract
+        </summary>
+
+        <div class="abstract-text">
+
+          <p>
+            We study whether municipal open-data initiatives affect housing
+            markets by reducing information frictions. Local governments
+            increasingly provide public records through centralized online
+            data portals, making information about properties, permits,
+            infrastructure, and local conditions easier for households and
+            market participants to access. We examine whether the introduction
+            of these portals improves housing-market liquidity by lowering the
+            cost of acquiring and verifying local information. We study
+            changes in transaction activity and other measures of market
+            liquidity around the adoption of municipal open-data portals. The
+            project sheds light on how improvements in public information
+            infrastructure affect real-estate markets.
+          </p>
+
+        </div>
+
+      </details>
+
+    </article>
+
+
+  </main>
+
+
+
+  <footer class="footer">
+    © 2026 Anushri Jain
+  </footer>
+
+
 </body>
+
 </html>
