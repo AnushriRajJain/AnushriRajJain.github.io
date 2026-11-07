@@ -1,130 +1,100 @@
 /* =========================================
    ANUSHRI JAIN — CV PAGE
+   Profile panel aligned with embedded CV
    ========================================= */
 
 body {
   background: #f7f6f2;
 }
 
-
-/* MAIN LAYOUT */
+/* MAIN LAYOUT
+   Row 1: CV heading and actions
+   Row 2: profile panel aligned with the PDF viewer
+   Row 3: PDF fallback text
+*/
 
 .cv-page {
   width: min(1180px, calc(100% - 44px));
   margin: 0 auto;
-  padding: 54px 0 76px;
-
+  padding: 42px 0 76px;
   display: grid;
   grid-template-columns: 250px minmax(0, 1fr);
-  gap: 56px;
-
+  grid-template-rows: auto auto auto;
+  column-gap: 56px;
+  row-gap: 18px;
   align-items: start;
 }
 
+/* The section remains semantic, while its children participate
+   directly in the page grid on desktop. */
+.cv-main {
+  display: contents;
+}
 
 /* =========================================
-   LEFT SIDEBAR
+   LEFT PROFILE PANEL
    ========================================= */
 
 .cv-sidebar {
+  grid-column: 1;
+  grid-row: 2 / span 2;
   position: sticky;
   top: 26px;
-
+  align-self: start;
   text-align: center;
   color: #24323a;
 }
 
-
-/* PHOTO */
-
 .sidebar-photo-wrap {
   width: 174px;
   height: 174px;
-
   margin: 0 auto 22px;
-
   border-radius: 50%;
   overflow: hidden;
-
   background: white;
-
-  box-shadow:
-    0 1px 0 rgba(0,48,73,.12);
+  box-shadow: 0 1px 0 rgba(0,48,73,.12);
 }
 
 .sidebar-photo {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center 32%;
 }
 
-
-/* NAME */
-
 .cv-sidebar h1 {
   margin: 0 0 8px;
-
   color: #003049;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 28px;
   font-weight: 400;
   line-height: 1.2;
 }
 
-
-/* TITLE */
-
 .sidebar-role {
   margin: 0 0 9px;
-
   color: #780000;
-
   font-size: 15px;
   font-weight: 600;
 }
 
-
-/* SCHOOL */
-
 .sidebar-school {
   margin: 0 auto 21px;
-
   max-width: 220px;
-
   color: #4f5c62;
-
   font-size: 14px;
   line-height: 1.55;
 }
 
-
-/* CONTACT DETAILS */
-
-.sidebar-details {
-  padding: 18px 0;
-
-  border-top:
-    1px solid rgba(0,48,73,.16);
-
-  border-bottom:
-    1px solid rgba(0,48,73,.16);
-}
-
-.sidebar-details p {
-  margin: 4px 0;
-
+/* One consolidated contact/profile section. */
+.sidebar-links {
+  padding-top: 18px;
+  border-top: 1px solid rgba(0,48,73,.16);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   font-size: 14px;
 }
-
-
-/* LINKS */
 
 .cv-sidebar a {
   color: #003049;
@@ -133,178 +103,98 @@ body {
 
 .cv-sidebar a:hover {
   color: #780000;
-
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.sidebar-links {
-  padding-top: 18px;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 8px;
-
-  font-size: 14px;
-}
-
-
 /* =========================================
-   CV AREA
+   CV HEADING AND ACTIONS
    ========================================= */
 
-.cv-main {
-  min-width: 0;
-}
-
-
-/* TITLE + BUTTONS */
-
 .cv-heading-row {
-  margin-bottom: 20px;
-
+  grid-column: 2;
+  grid-row: 1;
   display: flex;
-
   align-items: flex-end;
   justify-content: space-between;
-
   gap: 26px;
 }
 
-
-.eyebrow {
-  margin: 0 0 3px;
-
-  color: #669BBC;
-
-  font-size: 12px;
-  font-weight: 700;
-
-  letter-spacing: .12em;
-
-  text-transform: uppercase;
-}
-
-
-.cv-main h2 {
+.cv-page-title {
   margin: 0;
-
   color: #003049;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 38px;
   font-weight: 400;
-
   line-height: 1.15;
 }
 
-
-/* =========================================
-   BUTTONS
-   ========================================= */
-
 .cv-actions {
   display: flex;
-
   gap: 10px;
-
   flex-wrap: wrap;
-
   justify-content: flex-end;
 }
 
-
 .cv-button {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 40px;
-
   padding: 9px 15px;
-
-  border:
-    1px solid #003049;
-
+  border: 1px solid #003049;
   border-radius: 4px;
-
   color: #003049;
-
   background: transparent;
-
-  font-size: 14px;
-  font-weight: 600;
-
+  font: 600 14px Arial, Helvetica, sans-serif;
+  line-height: 1.2;
   text-decoration: none;
 }
 
-
-.cv-button:hover {
-  background:
-    rgba(0,48,73,.06);
-
+.cv-button:hover,
+.cv-button:focus-visible {
+  background: rgba(0,48,73,.06);
   color: #003049;
+  outline: none;
 }
-
 
 .cv-button.primary {
   background: #003049;
-
   color: white;
 }
-
 
 .cv-button.primary:hover {
   background: #12465f;
-
   color: white;
 }
-
 
 /* =========================================
    EMBEDDED PDF
    ========================================= */
 
 .cv-frame-wrap {
+  grid-column: 2;
+  grid-row: 2;
   overflow: hidden;
-
-  border:
-    1px solid rgba(0,48,73,.18);
-
+  border: 1px solid rgba(0,48,73,.18);
   border-radius: 3px;
-
   background: white;
-
-  box-shadow:
-    0 8px 28px rgba(31,41,48,.08);
+  box-shadow: 0 8px 28px rgba(31,41,48,.08);
 }
-
 
 .cv-frame {
   display: block;
-
   width: 100%;
-  height: 1080px;
-
+  height: max(980px, calc(100vh - 178px));
   border: 0;
-
   background: white;
 }
 
-
-/* PDF FALLBACK */
-
 .cv-fallback {
-  margin: 12px 0 0;
-
+  grid-column: 2;
+  grid-row: 3;
+  margin: -6px 0 0;
   color: #6a7378;
-
   font-size: 13px;
 }
 
@@ -312,38 +202,35 @@ body {
   color: #780000;
 }
 
-
 /* =========================================
    TABLET
    ========================================= */
 
 @media (max-width: 860px) {
-
   .cv-page {
-    grid-template-columns: 1fr;
+    display: block;
+    padding-top: 34px;
+  }
 
-    gap: 38px;
-
-    padding-top: 38px;
+  .cv-main {
+    display: block;
   }
 
   .cv-sidebar {
     position: static;
+    margin-bottom: 38px;
   }
 
   .sidebar-links {
     flex-direction: row;
-
     justify-content: center;
-
     flex-wrap: wrap;
-
     gap: 10px 18px;
   }
 
   .cv-heading-row {
+    margin-bottom: 18px;
     align-items: flex-start;
-
     flex-direction: column;
   }
 
@@ -354,18 +241,19 @@ body {
   .cv-frame {
     height: 900px;
   }
-}
 
+  .cv-fallback {
+    margin-top: 12px;
+  }
+}
 
 /* =========================================
    PHONE
    ========================================= */
 
 @media (max-width: 560px) {
-
   .cv-page {
-    width:
-      min(100% - 28px, 1180px);
+    width: min(100% - 28px, 1180px);
   }
 
   .sidebar-photo-wrap {
@@ -373,7 +261,7 @@ body {
     height: 150px;
   }
 
-  .cv-main h2 {
+  .cv-page-title {
     font-size: 32px;
   }
 
