@@ -85,6 +85,19 @@
       border-top:1px solid rgba(0,48,73,.16);
     }
 
+    /* The section spacing already separates Upcoming from Recent Activities. */
+    .upcoming-section .upcoming-item:last-child{
+      border-bottom:none;
+    }
+
+    .recent-section{
+      border-top:none;
+    }
+
+    .recent-section .activity-list{
+      border-top:none;
+    }
+
     .activity-item{
       display:grid;
       grid-template-columns:150px 1fr;
@@ -356,7 +369,7 @@
 
     <!-- UPCOMING -->
 
-    <section class="content-block activity-section">
+    <section class="content-block activity-section upcoming-section">
 
       <h2>
         Upcoming
@@ -437,7 +450,7 @@
           <p class="activity-meta">
 
             <strong>
-              Research Presentation · Conference Discussion
+              Research Presentation
             </strong>
 
             ·
@@ -561,7 +574,7 @@
 
     <!-- RECENT ACTIVITIES -->
 
-    <section class="content-block activity-section">
+    <section class="content-block activity-section recent-section">
 
       <h2>
         Recent Activities
@@ -576,7 +589,6 @@
         <div class="activity-item">
 
           <div class="activity-date">
-            Oct 14–17<br>
             2026
           </div>
 
@@ -588,11 +600,7 @@
             </p>
 
             <p class="activity-meta">
-              Tampa, Florida · Research presentation ·
-              <em>
-                Board Diversity and the Career Progression of Women:
-                Evidence from SB 826
-              </em>
+              Research presentation
             </p>
 
           </div>
